@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "17653553931",
+    "project_id": "alfagift-technical",
+    "storage_bucket": "alfagift-technical.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17653553931:android:df6d039e6af86159cba00e",
+        "android_client_info": {
+          "package_name": "com.example.technicaltest2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk8qjcxS7BtBIiwDtSsRqJSP_GaUvaA2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
