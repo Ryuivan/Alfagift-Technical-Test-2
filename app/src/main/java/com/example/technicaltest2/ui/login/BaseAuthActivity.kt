@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.technicaltest2.ui.list.StudentListActivity
 import com.example.technicaltest2.util.FirebaseInstance
 
 open class BaseAuthActivity : AppCompatActivity() {
