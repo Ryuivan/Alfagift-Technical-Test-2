@@ -14,53 +14,55 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--    Profile Picture    -->
+        <!--    Profile Picture Skeleton Placeholder    -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_picture"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/profile_picture"
-            android:background="@color/dark_red"
+            android:background="@drawable/student_placeholder"
             app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
-        <!--    Student Name    -->
+        <!--    Student Name Skeleton Placeholder    -->
         <TextView
             android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="4dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginHorizontal="8dp"
             android:textStyle="bold"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:alpha="0.8"
-            tools:text="John Doe" />
+            android:background="@drawable/student_placeholder" />
 
         <!--    Student Address Layout    -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginStart="8dp"
+            android:layout_marginHorizontal="8dp"
             android:layout_marginBottom="8dp"
             tools:ignore="UseCompoundDrawables">
 
-            <!--    Address Icon    -->
+            <!--    Address Icon Skeleton Placeholder    -->
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:contentDescription="@string/address"
                 android:layout_gravity="center"
-                android:src="@drawable/address" />
+                android:background="@drawable/student_placeholder" />
 
-            <!--    Student Address    -->
+            <!--    Student Address Skeleton Placeholder    -->
             <TextView
                 android:id="@+id/student_address"
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:textColor="@color/gray"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/student_placeholder" />
 
         </LinearLayout>
 

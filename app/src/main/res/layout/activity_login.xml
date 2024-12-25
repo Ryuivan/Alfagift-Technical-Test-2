@@ -8,17 +8,20 @@
     tools:context=".ui.login.LoginActivity"
     android:background="@color/dark_red">
 
+    <!--    Application Logo    -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/student_app"
         android:src="@drawable/student_app_logo"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    Application Title    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,10 +31,10 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <!--    Form Layout    -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -51,6 +54,7 @@
             android:paddingTop="32dp"
             android:paddingBottom="80dp">
 
+            <!--    Heading    -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,6 +63,7 @@
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
+            <!--    Subheading    -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,6 +71,7 @@
                 android:text="@string/please_login_with_your_credential"
                 android:textSize="12sp" />
 
+            <!--    Username Title    -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,6 +81,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
+            <!--    Username Input    -->
             <EditText
                 android:id="@+id/username_form"
                 android:layout_width="match_parent"
@@ -85,10 +92,10 @@
                 android:labelFor="@+id/username_form"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="normal"
                 android:letterSpacing="0.01"
                 tools:text="alfagift-admin" />
 
+            <!--    Password Title    -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,20 +105,40 @@
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/password_form"
+            <!--    Password Form    -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:alpha="0.7"
-                android:autofillHints="username"
-                android:drawableEnd="@drawable/visibility"
-                android:inputType="textPassword"
-                android:labelFor="@+id/password_form"
-                android:letterSpacing="0.175"
-                android:textColor="@color/black"
-                android:textStyle="normal"
-                tools:text="asdf" />
+                android:layout_height="wrap_content">
 
+                <!--    Input Password    -->
+                <EditText
+                    android:id="@+id/password_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:alpha="0.7"
+                    android:autofillHints="password"
+                    android:inputType="textPassword"
+                    android:labelFor="@+id/password_form"
+                    android:letterSpacing="0.175"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:paddingEnd="48dp"
+                    tools:text="asdf" />
+
+                <!--    Password Visibility Toggle    -->
+                <ImageButton
+                    android:id="@+id/password_toggle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/password"
+                    android:src="@drawable/visibility_off" />
+
+            </RelativeLayout>
+
+            <!--    Login Button    -->
             <Button
                 android:id="@+id/button_login"
                 android:layout_width="match_parent"

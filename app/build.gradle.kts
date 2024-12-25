@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.shimmer)
     implementation(libs.glide)
     implementation(libs.github.javafaker)
     implementation(platform(libs.firebase.bom))

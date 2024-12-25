@@ -8,19 +8,7 @@
     android:backgroundTint="@color/white"
     tools:context=".ui.list.StudentListActivity">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_student"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        app:iconifiedByDefault="false"
-        android:background="@drawable/search_view_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/student_list_title"
-        app:queryHint="@string/search" />
-
+    <!--    List Title    -->
     <TextView
         android:id="@+id/student_list_title"
         android:layout_width="wrap_content"
@@ -35,6 +23,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    Search Student Name Input Form    -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:iconifiedByDefault="false"
+        android:background="@drawable/search_view_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_list_title"
+        app:queryHint="@string/search" />
+
+    <!--    Skeleton Loader Placeholder Layout    -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_student"
+        tools:visibility="visible">
+
+        <!--    Skeleton loader for each student item    -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/student_recycler_view_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_student_placeholder" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!--    Student List    -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/student_recycler_view"
         android:layout_width="match_parent"

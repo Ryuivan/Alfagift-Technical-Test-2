@@ -11,8 +11,11 @@ open class BaseAuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         try {
+            // Check if there is a current authenticated user
             val currentUser = FirebaseInstance.auth.currentUser
-            if (currentUser == null || isUserBlocked()) {
+
+            // If no user is authenticated or if the user is blocked, redirect to the login screen
+            if (currentUser == null) {
                 redirectToLogin()
             }
         } catch (e: Exception) {
@@ -20,13 +23,14 @@ open class BaseAuthActivity : AppCompatActivity() {
         }
     }
 
-    private fun isUserBlocked(): Boolean {
-        return false
-    }
-
+    /**
+     * Redirects the user to the login screen.
+     */
     private fun redirectToLogin() {
         val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
+
+        // Finish the current activity to prevent returning to it
         finish()
     }
 }

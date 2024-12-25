@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Technical Test 2</string>
+    <string name="app_name">Student App</string>
     <string name="welcome_back">Welcome Back!</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
